@@ -32,6 +32,14 @@
                 <label><input type="checkbox" name="lembrar"> Lembre-me</label>
             </div>
 
+            <?php
+            session_start();
+            if (isset($_SESSION['erro_login'])) {
+            echo "<p style='color: red; text-align: center;'>" . $_SESSION['erro_login'] . "</p>";
+            unset($_SESSION['erro_login']); // remove a mensagem depois de exibir
+            }
+            ?>
+
             <div class="card-group btn">
                 <button type="submit">ACESSAR</button>
             </div> 

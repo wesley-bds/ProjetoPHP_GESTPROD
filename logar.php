@@ -1,13 +1,26 @@
 <?php
+session_start();
 
-if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) && !empty($_POST['senha'])){
+if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
 
-    require 'Gerenciador/conexao2.php'
-    require 'usuario.php'
+    require 'conexao2.php';
+    require 'usuario.php';
 
-$email = addslashes($_POST['email']);
-$senha = addcslashes($_POST['senha']);
+    $u = new Usuario();
 
-}else{
-    header('Location: login.php');
+    $email = addslashes($_POST['email']);
+    $senha = addslashes($_POST['senha']);
+
+    if($u->login($email, $senha)) {
+        header("Location: index.php");
+        exit;
+    } else {
+        $_SESSION['erro_login'] = "Usuário ou senha incorretos!";
+        header("Location: login.php");
+        exit;
+    }
+
+} else {
+    header("Location: login.php");
+    exit;
 }
