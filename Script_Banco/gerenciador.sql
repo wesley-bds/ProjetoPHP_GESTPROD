@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27/05/2025 às 02:23
+-- Tempo de geração: 27/05/2025 às 03:36
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `gerenciador`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `maquinas`
+--
+
+CREATE TABLE `maquinas` (
+  `id` int(11) NOT NULL,
+  `lote` varchar(255) NOT NULL,
+  `apontamento` text NOT NULL,
+  `dados` text DEFAULT NULL,
+  `contador` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `maquinas`
+--
+
+INSERT INTO `maquinas` (`id`, `lote`, `apontamento`, `dados`, `contador`) VALUES
+(1, '123', 'certo', 'sim', 50),
+(2, '123', 'certo', 'sim', 50),
+(3, 'eu', '2', '1', 100),
+(4, 'aaa', 'aaaa', 'aaaa', 3),
+(5, 'erghrehgre', 'rtgerg', 'rgre', 2);
 
 -- --------------------------------------------------------
 
@@ -59,6 +84,12 @@ INSERT INTO `usuarios` (`idusuario`, `nome`, `email`, `senha`) VALUES
 --
 
 --
+-- Índices de tabela `maquinas`
+--
+ALTER TABLE `maquinas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `produtos`
 --
 ALTER TABLE `produtos`
@@ -73,6 +104,12 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `maquinas`
+--
+ALTER TABLE `maquinas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`

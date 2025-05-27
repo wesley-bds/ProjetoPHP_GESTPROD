@@ -32,7 +32,7 @@ if(isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])): ?>
           Cadastro
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Maquinas</a>
+          <a class="dropdown-item" href="Cadastro_Maquinas/cadastro.php">Maquinas</a>
           <a class="dropdown-item" href="#">Produtos</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Algo mais aqui</a>
