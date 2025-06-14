@@ -1,0 +1,245 @@
+
+:root {
+    --primary-color: #0056b3; 
+    --secondary-color: #6c757d; 
+    --dark-bg: #343a40; 
+    --light-bg: #e9ecef; 
+    --text-color: #495057; 
+    --border-color: #dee2e6; 
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.08); 
+
+    /* Cores para os cards de status das máquinas */
+    --status-success: #28a745; 
+    --status-warning: #ffc107; 
+    --status-danger: #dc3545; 
+    --status-info: #17a2b8; 
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--light-bg); 
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+main.container.mt-4,
+.container:not(.login-container) { 
+    flex-grow: 1;
+    margin-top: 0 !important; 
+    padding-top: 70px; 
+    padding-bottom: 2rem;
+}
+
+
+/* Navbar Customização */
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+.navbar-brand {
+    font-weight: 700;
+    color: #f8f9fa !important; 
+}
+.navbar-brand i {
+    margin-right: 8px;
+    color: var(--primary-color); 
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.75) !important; 
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #fff !important; 
+}
+.nav-link i {
+    margin-right: 5px;
+}
+.navbar-nav .btn-outline-danger {
+    border-color: rgba(220, 53, 69, 0.7) !important;
+    color: rgba(220, 53, 69, 0.7) !important;
+}
+.navbar-nav .btn-outline-danger:hover {
+    background-color: var(--status-danger) !important;
+    color: #fff !important;
+}
+
+
+
+.message.success {}
+.message.error {}
+
+/* Dashboard Cards (Máquinas e Resumo) */
+.card { 
+    border: none; 
+    border-radius: 0.75rem; 
+    box-shadow: 0 0.4rem 1rem var(--card-shadow); 
+    overflow: hidden; 
+}
+
+.card-header {
+    background-color: var(--dark-bg); 
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 1.5rem; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+    padding: 1.5rem; 
+}
+
+/* Cards de Status das Máquinas (Dashboard) */
+.card.text-white.bg-primary,
+.card.text-white.bg-success,
+.card.text-white.bg-warning,
+.card.text-white.bg-danger {
+    border-radius: 0.75rem;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1); 
+    transform: none; 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+.card.text-white.bg-primary:hover,
+.card.text-white.bg-success:hover,
+.card.text-white.bg-warning:hover,
+.card.text-white.bg-danger:hover {
+    transform: translateY(-0.25rem); 
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* Altera as cores das classes bg-primary, etc., para as do seu root */
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-success { background-color: var(--status-success) !important; }
+.bg-warning { background-color: var(--status-warning) !important; }
+.bg-danger { background-color: var(--status-danger) !important; }
+.bg-info { background-color: var(--status-info) !important; } 
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.card-text {
+    font-size: 1.8rem; 
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+
+/* Tabelas */
+.table {
+    margin-bottom: 0;
+}
+.table thead th {
+    background-color: var(--dark-bg);
+    color: #fff;
+    border-bottom: none;
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+}
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03); /* Leve destaque no hover da linha */
+}
+.table tbody td {
+    padding: 0.85rem 1.25rem;
+    vertical-align: middle;
+    border-top: 1px solid var(--border-color);
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.01); /* Um listrado muito sutil */
+}
+
+/* Formulários */
+.form-control {
+    border-radius: 0.35rem;
+    border: 1px solid var(--border-color);
+    padding: 0.65rem 1rem;
+}
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+.btn {
+    border-radius: 0.35rem;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.2s ease;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: #004494; /* Tom mais escuro no hover */
+    border-color: #004494;
+}
+.btn-success {
+    background-color: var(--status-success);
+    border-color: var(--status-success);
+}
+.btn-danger {
+    background-color: var(--status-danger);
+    border-color: var(--status-danger);
+}
+.btn-info {
+    background-color: var(--status-info);
+    border-color: var(--status-info);
+}
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Login Page */
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+}
+.login-container {
+    background-color: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.75rem 1.5rem var(--card-shadow);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+.login-container h1 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.login-container .form-label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.login-container .btn-primary {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--dark-bg);
+    color: #f8f9fa;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer p {
+    margin-bottom: 0;
+    color: #adb5bd;
+    font-size: 0.9em;
+}
