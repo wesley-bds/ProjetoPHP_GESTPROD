@@ -64,7 +64,7 @@ $conn->close();
 <h2 class="mt-5">Status das Máquinas</h2>
 <div class="row">
     <div class="col-md-3">
-        <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=all" class="text-decoration-none">
+        <a href="/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=all" class="text-decoration-none">
             <div class="card text-white bg-primary mb-3 hover-effect">
                 <div class="card-body text-center">
                     <h5 class="card-title">Total de Máquinas</h5>
@@ -74,7 +74,7 @@ $conn->close();
         </a>
     </div>
     <div class="col-md-3">
-        <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=produção" class="text-decoration-none">
+        <a href="/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=produção" class="text-decoration-none">
             <div class="card text-white bg-success mb-3 hover-effect">
                 <div class="card-body text-center">
                     <h5 class="card-title">Em Produção</h5>
@@ -84,7 +84,7 @@ $conn->close();
         </a>
     </div>
     <div class="col-md-3">
-        <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=ociosa" class="text-decoration-none">
+        <a href="/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=ociosa" class="text-decoration-none">
             <div class="card text-white bg-warning mb-3 hover-effect">
                 <div class="card-body text-center">
                     <h5 class="card-title">Ociosas</h5>
@@ -94,7 +94,7 @@ $conn->close();
         </a>
     </div>
     <div class="col-md-3">
-        <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=parada" class="text-decoration-none">
+        <a href="/ProjetoPHP_GESTPROD/maquinas/detalhes.php?status=parada" class="text-decoration-none">
             <div class="card text-white bg-danger mb-3 hover-effect">
                 <div class="card-body text-center">
                     <h5 class="card-title">Paradas</h5>
@@ -106,7 +106,7 @@ $conn->close();
 </div>
     
     <div class="alert alert-info text-center mt-4" role="alert">
-        <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/maquinas/cadastrar.php" class="btn btn-primary btn-lg">Cadastrar Maquina</a>
+        <a href="/ProjetoPHP_GESTPROD/maquinas/cadastrar.php" class="btn btn-primary btn-lg">Cadastrar Maquina</a>
     </div>
     
 </main>

@@ -2,7 +2,7 @@
 // produtos/excluir.php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /PHP-GESTPROD/ProjetoPHP_GESTPROD/index.php");
+    header("Location: /ProjetoPHP_GESTPROD/index.php");
     exit();
 }
 

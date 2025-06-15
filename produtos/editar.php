@@ -16,7 +16,7 @@ $produto_id = '';
 
 // Verifica se foi passado um ID pela URL
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    header("Location:/PHP-GESTPROD/ProjetoPHP_GESTPROD/produtos");
+    header("Location:/ProjetoPHP_GESTPROD/produtos");
     exit();
 }
 

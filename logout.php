@@ -27,5 +27,5 @@ if (ini_get("session.use_cookies")) {
 session_destroy();
 
 
-header("Location: /projeto2/index.php");
+header("Location: /ProjetoPHP_GESTPROD/index.php");
 exit;

@@ -18,13 +18,13 @@ if (session_status() == PHP_SESSION_NONE) {
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Seu CSS customizado -->
-    <link rel="stylesheet" href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/CSS/style.css" />
+    <link rel="stylesheet" href="/ProjetoPHP_GESTPROD/CSS/style.css" />
 </head>
 <body>
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/dashboard.php">
+        <a class="navbar-brand" href="/ProjetoPHP_GESTPROD/dashboard.php">
             <i class="fas fa-industry"></i> Gestão de Produção
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,12 +34,12 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/dashboard.php">
+                    <a class="nav-link" href="/ProjetoPHP_GESTPROD/dashboard.php">
                         <i class="fas fa-tachometer-alt"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/produtos/listar.php">
+                    <a class="nav-link" href="/ProjetoPHP_GESTPROD/produtos/listar.php">
                         <i class="fas fa-box"></i> Produtos
                     </a>
                 </li>
@@ -49,7 +49,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-danger ms-2" href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/index.php">
+                    <a class="nav-link btn btn-outline-danger ms-2" href="/ProjetoPHP_GESTPROD/index.php">
                         <i class="fas fa-sign-out-alt"></i> Sair
                     </a>
                 </li>
