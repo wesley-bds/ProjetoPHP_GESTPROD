@@ -243,3 +243,20 @@ body.login-page {
     color: #adb5bd;
     font-size: 0.9em;
 }
+/* Efeito hover para os cards */
+.hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Remove o sublinhado dos links */
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+/* Melhora a aparência dos badges */
+.badge {
+    font-size: 0.85em;
+    padding: 0.5em 0.75em;
+}

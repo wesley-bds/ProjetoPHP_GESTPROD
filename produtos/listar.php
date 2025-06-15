@@ -2,13 +2,26 @@
 // produtos/listar.php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    // Ajuste o caminho se a sua página de login não for diretamente em /projeto2/index.php
-    header("Location: /projeto2/index.php");
+    header("Location: /PHP-GESTPROD/ProjetoPHP_GESTPROD/index.php");
     exit();
+}
+
+// Exibe mensagens de feedback se existirem
+if (isset($_SESSION['mensagem'])) {
+    $mensagem = $_SESSION['mensagem'];
+    echo '<div class="alert alert-' . $mensagem['tipo'] . ' alert-dismissible fade show" role="alert">';
+    echo $mensagem['texto'];
+    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+    echo '</div>';
+    
+    // Limpa a mensagem após exibir
+    unset($_SESSION['mensagem']);
 }
 
 require_once __DIR__ . '/../includes/database.php'; // Conexão com o banco
 require_once __DIR__ . '/../includes/header.php';   // Header da página
+
+
 
 // Consulta para buscar produtos
 // Ordena por 'id' em ordem decrescente para mostrar os mais novos primeiro
@@ -27,7 +40,7 @@ $conn->close();
 <main class="container mt-4">
     <h1 class="mb-4">Gestão de Produtos</h1> <?php if (empty($produtos)): ?>
         <div class="alert alert-info text-center" role="alert">
-            Nenhum produto cadastrado ainda. <a href="/projeto2/produtos/cadastrar.php" class="alert-link">Cadastre o primeiro!</a>
+            Nenhum produto cadastrado ainda. <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/produtos/cadastrar.php" class="alert-link">Cadastre o primeiro!</a>
     </div>
 <?php else: ?>
     <div class="card shadow-sm p-4">
@@ -50,10 +63,10 @@ $conn->close();
         <td><?php echo htmlspecialchars($produto['descricao']); ?></td>
         <td><?php echo htmlspecialchars($produto['estoque'] ?? 'N/A'); ?></td>
         <td class="text-center">
-            <a href="/projeto2/produtos/editar.php?id=<?php echo htmlspecialchars($produto['id']); ?>" class="btn btn-sm btn-info me-2" title="Editar Produto">
+            <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/produtos/editar.php?id=<?php echo htmlspecialchars($produto['id']); ?>" class="btn btn-sm btn-info me-2" title="Editar Produto">
                 <i class="fas fa-edit"></i>
             </a>
-            <a href="/projeto2/produtos/excluir.php?id=<?php echo htmlspecialchars($produto['id']); ?>" class="btn btn-sm btn-danger" title="Excluir Produto" onclick="return confirm('Tem certeza que deseja excluir este produto?');">
+            <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/produtos/excluir.php?id=<?php echo htmlspecialchars($produto['id']); ?>" class="btn btn-sm btn-danger" title="Excluir Produto" onclick="return confirm('Tem certeza que deseja excluir este produto?');">
                 <i class="fas fa-trash-alt"></i>
             </a>
         </td>
@@ -64,7 +77,7 @@ $conn->close();
         </div>
     </div>
 
-    <div class="d-flex justify-content-end mt-4"> <a href="/projeto2/produtos/cadastrar.php" class="btn btn-primary btn-lg">
+    <div class="d-flex justify-content-end mt-4"> <a href="/PHP-GESTPROD/ProjetoPHP_GESTPROD/produtos/cadastrar.php" class="btn btn-primary btn-lg">
             <i class="fas fa-plus-circle me-2"></i>Cadastrar Novo Produto
         </a>
     </div>
